@@ -1,6 +1,6 @@
 self.addEventListener('install', (event) => {
 	event.waitUntil(async function() {
-		const cache = await caches.open('notecards-2');
+		const cache = await caches.open('notecards-3');
 		await cache.addAll([
 			'./index.html',
 			'./global.css',
