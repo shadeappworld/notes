@@ -3,8 +3,7 @@
 
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <head>
-<head>
-  <meta http-equiv="Refresh" content="0; URL=https://notes-murex-three.vercel.app/notworking.html" /><script async src="https://www.googletagmanager.com/gtag/js?id=G-4DRTK71398"></script>
+	    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4DRTK71398"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -22,14 +21,14 @@
 	<title>Shade Notes Pro - The ultimate note-taking app.</title>
 	
 	<style>
-.circle-popup {
+	.circle-popup {
       position: fixed;
-      bottom: 30px;
-      left: 30px;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background-color: #e74c3c;
+      bottom: 0px;
+      left: 0px;
+      width: 100%;
+      height: 6%;
+      border-radius: 0px;
+      background-color: #88ABFF;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -38,49 +37,53 @@
     }
 
     .chat-icon {
-    position: fixed;
-      bottom: 30px;
-      left: 30px;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      background-color: #e74c3c;
+      position: fixed;
+      bottom: 0px;
+      left: 0px;
+      width: 100%;
+      height: 6%;
+      border-radius: 0px;
+      background-color: #88ABFF;
       display: flex;
       justify-content: center;
       align-items: center;
       cursor: pointer;
       z-index: 9999;
-      }
+    }
 
     .popup-content {
       position: fixed;
-            top: 0px;
-            left: 0%;
-            right: 10%;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            display: block;
-            z-index: 99999;
-            border-radius: 0%
+      top: 0px;
+      left: 0%;
+      right: 10%;
+      width: 100%;
+      height: 94%;
+      background-color: rgba(0, 0, 0, 0.512);
+      display: none;
+      z-index: 99999;
+      border-radius: 0%
     }
 
     .close-btn {
-      position: absolute;
-      top: 10px;
-      left: 50px
-      right: 10px;
-      width: 20px;
-      height: 20px;
-      background-color: #e74c3c;
+      position: fixed;
+      bottom: 0px;
+      left: 0px;
+      width: 100%;
+      height: 40px;
+      border-radius: 0px;
+      background-color: #88ABFF;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       cursor: pointer;
+      z-index: 9999;
     }
 
     iframe {
       width: 100%;
       height: 100%;
       border-radius: 0%;
-    }</style>
+    }  </style>
 
 
 	<link href='https://fonts.googleapis.com/icon?family=Material+Icons+Outlined' rel='stylesheet' type='text/css' />
@@ -143,6 +146,14 @@
 		}
 	</script>
 
+<div class="circle-popup">
+	<div class="chat-icon">🪄 Inline Magic</div>
+		<div class="popup-content">
+					  
+							<iframe id="popup-iframe" src="https://msha.ke/shadesoftware" allowfullscreen="true" draggable="true" allow="microphone; camera"></iframe>
+								</div> 
+										 </div>
+
 										 <script>
 											// Get the necessary DOM elements
 												var circlePopup = document.querySelector('.circle-popup');
@@ -164,6 +175,14 @@
 										  });
 																								 </script>
 
+		<!-- Place the following <script> and <textarea> tags your HTML's <body> -->
+			<script>
+			  tinymce.init({
+				    selector: 'textarea',
+					    plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
+						    toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+			  });
+			  </script>
 
 			  
 </body>
