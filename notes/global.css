@@ -1,17 +1,17 @@
 :root {
    /* Primary */
-   --primary: #11ff00;
-   --on-primary: #bcf4af;
+   --primary: #0000ff;
+   --on-primary: #ffffff;
 
    /* Background */
-   --background: #c5f7bd;
-   --surface: #d1fbd4;
-   --contrast: #c1f6c7;
-   --hover: #14191508;
-   --gradient: linear-gradient(0deg, #92c1a100 0%, #c5f7bd 40%, #aae1af 100%);
+   --background: #ffffff;
+   --surface: #fafafb;
+   --contrast: #e2e2ee;
+   --hover: #14141908;
+   --gradient: linear-gradient(0deg, #f9f9fa00 0%, #f9f9facc 40%, #f9f9fa 100%);
 
    /* Font */
-   --color: #1b1b1c;
+   --color: #141419;
    --color-secondary: #64646e;
 
    /* Scales */
@@ -32,9 +32,9 @@
 
 @media (prefers-color-scheme: dark) { :root {
    /* Background */
-   --background: #1d2518;
-   --surface: #141914;
-   --contrast: #1d241d;
+   --background: #181c25;
+   --surface: #141419;
+   --contrast: #1d1d24;
    --hover: #ffffff08;
    --gradient: linear-gradient(0deg, #14141900 0%, #141419cc 40%, #141419 100%);
 
