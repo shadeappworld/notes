@@ -1,6 +1,6 @@
 {
-  "name": "Shade Notes Pro",
-  "short_name": "Notes",
+  "name": "Shade Notes Plus",
+  "short_name": "Notes Go",
   "start_url": "index.html",
   "scope": "./",
   "icons": [
@@ -15,19 +15,7 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#333333",
-  "background_color": "#333333",
-  "display": "standalone",
-  "description": "Do you want to take notes like a pro? Then you need this notes app! It lets you create, store, and share notes with ease. You can also sort and view your notes in different ways. Whether you need to jot down a shopping list, a memo, or a research project, this app has you covered. Don't miss this opportunity to simplify your life and boost your productivity.",
-  "orientation": "portrait",
-  "categories": [
-    "entertainment"
-  ],
-  "dir": "auto",
-  "iarc_rating_id": "e58c174a-81d2-5c3c-32cc-34b8de4a52e9",
-  "prefer_related_applications": false,
-  "edge_side_panel": {
-    "preferred_width": 30
-  },
-  "lang": "en"
+  "theme_color": "#88ff8e",
+  "background_color": "#333",
+  "display": "standalone"
 }
