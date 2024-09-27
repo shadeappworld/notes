@@ -80,8 +80,16 @@
     background-position: 200% 50%;
   }
 }		.popup-content {
-		top: 35%;	border-radius: 4%;		z-index: 999; display: none; /* Initially hidden */ position: fixed;			left: 10%; width: 80%; height: 50%; background-color: grey; backdrop-filter: blur(5px); box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
-		}
+		position: fixed;
+            top: 35%;
+            left: 10%;
+            right: 10%;
+            width: 80%;
+            height: 50%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: block;
+            z-index: 99999;
+            border-radius: 0%}
 	
 		.close-btn {
 		  position: fixed;
@@ -266,7 +274,7 @@
 	<div class="chat-icon">Open Shade AI</div>
 		<div class="popup-content">
 					  
-							<iframe id="popup-iframe" src="https://notesultra.vercel.app/ai.html" allowfullscreen="true" draggable="true" allow="microphone" allow="camera; microphone"></iframe>
+							<iframe id="popup-iframe" src="https://notesultra.vercel.app/ai.html" allowfullscreen="true" draggable="true" allow="microphone" draggable="true"></iframe>
 								</div> 
 										 </div>
 
