@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap');
+	</style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J7373NT19P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-J7373NT19P');
+</script>
+  <style>
+  
+		.circle-popup {
+      position: fixed;
+      bottom: 0px;
+      left: 0px;
+      width: 100%;
+      height: 5%;
+      border-radius: 1px;
+      background-color: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      z-index: 9999;
+			color: white;
+    }
+
+    .chat-icon {
+		position: fixed;
+      bottom: 0px;
+      left: 0px;
+      width: 100%;
+      height: 5%;
+      border-radius: 1px;
+      background-color: transparent;
+      backdrop-filter: blur(3px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      z-index: 9999;
+	    color: white;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.01);
+}
+.chat-icon::after {
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  transform: scale(1.4) translateZ(0);
+  filter: blur(25px);
+  background: linear-gradient(to left, #ff5770, #e4428d, #c42da8, #9e16c3, #6501de, #9e16c3, #c42da8, #e4428d, #ff5770);
+  background-size: 200% 200%;
+  -webkit-animation: animateGlow 1.25s linear infinite;
+          animation: animateGlow 1.25s linear infinite;
+}
+
+@-webkit-keyframes animateGlow {
+  0% {
+    background-position: 200% 200%;
+  }
+  100% {
+    background-position: 200% 200%;
+  }
+}
+
+@keyframes animateGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}		.popup-content {
+		position: fixed;
+            top: 35%;
+            left: 10%;
+            right: 10%;
+            width: 80%;
+            height: 50%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: block;
+            z-index: 99999;
+            border-radius: 0%}
+	
+		.close-btn {
+		  position: fixed;
+		  bottom: 0px;
+		  left: 0px;
+		  width: 100%;
+		  height: 40px;
+		  border-radius: 0px;
+		  background-color: #264d29;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  cursor: pointer;
+		  z-index: 9999;
+		}
+	
+		iframe {
+		  width: 100%;
+		  height: 100%;
+		  border-radius: 0%;
+		}
+	 
+	.wrapper {
+  background: transparent;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  max-width: 80%;
+  width: 100%;
+  margin: 15px auto;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 0px 10px 15px rgba(255, 255, 255, 0.1);
+  color: white;
+}
+.wrapper header {
+  font-size: 30px;
+  font-weight: 600;
+}
+.wrapper .inputField {
+  margin: 20px 0;
+  width: 100%;
+  display: flex;
+  height: 45px;
+}
+.inputField input {
+  width: 95%;
+  height: 100%;
+  outline: none;
+  border-radius: 3px;
+  border: 1px solid #cccccc73;
+  font-size: 17px;
+  padding-left: 15px;
+  transition: all 0.3s ease;
+  background: transparent;
+  backdrop-filter: blur(3px);
+}
+.inputField input:focus {
+  border-color: #ffffff;
+  background: transparent;
+  backdrop-filter: blur(3px);
+  color: white;
+}
+.inputField button {
+  width: 50px;
+  height: 100%;
+  border: none;
+  color: #c5f7bd;
+  margin-left: 5px;
+  font-size: 21px;
+  outline: none;
+  background: #ffffff;
+  cursor: pointer;
+  border-radius: 5px;
+  opacity: 0.5;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.inputField button:hover,
+.footer button:hover {
+  background: #c5f7bd;
+}
+.inputField button.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.wrapper .todoList {
+  max-height: 250px;
+  overflow-y: auto;
+}
+.todoList li {
+  position: relative;
+  list-style: none;
+  margin-bottom: 8px;
+  background: #544d4d0c;
+  backdrop-filter: blur(3px);
+  border-radius: 3px;
+  padding: 10px 15px;
+  cursor: default;
+  width: 70%;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+.todoList li .icon {
+  position: absolute;
+  right: -45px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #e74c3c;
+  width: 45px;
+  text-align: center;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.todoList li:hover .icon {
+  right: 0px;
+}
+.wrapper .footer {
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer button {
+  padding: 6px 10px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-weight: 400;
+  font-size: 16px;
+  margin-left: 5px;
+  background: #c5f7bd;
+  cursor: pointer;
+  user-select: none;
+  opacity: 0.6;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.footer button.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+  </style>
+
+  <meta charset="utf-8" />
+  <title>Shade Notes</title>
+  <link href="https://fonts.googleapis.com/css?family=Reenie+Beanie&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <div id="heading">
+    <h1>Shade Notes</h1>
+    <p id="ts"></p>
+  </div>
+  <div id="form">
+    <form id="inputForm">
+      <input type="text" class="inputText" placeholder="Title" id="new-note-title-input" autocomplete="on" required
+        autofocus maxlength="17">
+
+      <input class="inputText" type="text" placeholder="Note Content" id="new-note-body-input" autocomplete="off"
+        required style="resize: vertical" maxlength="50" />
+        
+      <button type="submit" class="btn">
+        Create Note
+      </button>
+    </form>
+  </div>
+  <h3 id="no-notes"></h3>
+  <ul id="notes"></ul>
+  <script src="myscripts.js"></script> <script src="script.js"></script>
+  
+	
+	
+</body>
+
+</html>
