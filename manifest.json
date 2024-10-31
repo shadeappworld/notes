@@ -1,6 +1,6 @@
 {
-  "name": "Shade Notes Plus",
-  "short_name": "Notes Go",
+  "name": "Shade Notes",
+  "short_name": "Notes",
   "start_url": "index.html",
   "scope": "./",
   "icons": [
